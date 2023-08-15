@@ -5,4 +5,6 @@ WORKDIR /app
 
 RUN mvn package
 
-ENTRYPOINT [ "mvn", "springboot:run" ]
+RUN ls -la
+
+ENTRYPOINT [ "mvn", "spring-boot:run" ]

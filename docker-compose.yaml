@@ -8,6 +8,8 @@ services:
     image: redis:alpine
   mysql-db:
     image: mysql
+    volumes:
+      - ./starter.sql:/docker-entrypoint-initdb.d/init.sql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
