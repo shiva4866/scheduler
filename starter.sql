@@ -1,10 +1,10 @@
 CREATE DATABASE scheduler;
 USE scheduler;
 
-CREATE TABLE process (
+CREATE TABLE your_table_name (
+    process_id INT NOT NULL PRIMARY KEY,
     process_name VARCHAR(255),
-    process_id INT,
-    process_start_time DATETIME
+    process_start_time VARCHAR(255)
 );
 
 INSERT INTO process (process_name, process_id, process_start_time)
@@ -14,6 +14,5 @@ VALUES
     ('Process 2', 102, '2023-08-15 01:00:00'),
     ('Process 3', 103, '2023-08-15 02:00:00'),
     ('Process 4', 104, '2023-08-15 03:00:00'),
-    -- Continue for other hours
     ('Process 23', 123, '2023-08-15 22:00:00'),
     ('Process 24', 124, '2023-08-15 23:00:00');

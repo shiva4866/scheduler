@@ -1,16 +1,14 @@
 package com.example.scheduler;
 
 import java.util.List;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("processService")
 public class ProcessService {
-    private final ProcessRepository processRepository;
 
-    public ProcessService(ProcessRepository processRepository) {
-        this.processRepository = processRepository;
-    }
+    @Autowired
+    private ProcessRepository processRepository;
 
     public List<Process> findAll() {
         return processRepository.findAll();

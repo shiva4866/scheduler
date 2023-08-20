@@ -2,32 +2,28 @@ package com.example.scheduler;
 
 import java.time.LocalDateTime;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
 @Getter
 @Setter
-@Table(name = "process")
+@Entity
 public class Process {
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(columnDefinition = "process_id")
-  private Long processId;
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "process_id")
+  private Integer processId;
 
-  @Column(columnDefinition = "process_name")
+  @Column(name = "process_name")
   private String processName;
 
-  @Column(columnDefinition = "process_start_time")
-  private LocalDateTime processStartTime;
+  @Column(name = "process_start_time")
+  private String processStartTime;
 }
