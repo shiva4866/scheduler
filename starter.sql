@@ -1,7 +1,7 @@
 CREATE DATABASE scheduler;
 USE scheduler;
 
-CREATE TABLE your_table_name (
+CREATE TABLE process (
     process_id INT NOT NULL PRIMARY KEY,
     process_name VARCHAR(255),
     process_start_time VARCHAR(255)
